@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="GTEestiProDisplay.otf">
+            <string>GTEestiProDisplay-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CircularAnimation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Gentle" translatesAutoresizingMaskIntoConstraints="NO" id="3N9-ah-o0Q">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NyR-Go-VX2">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="tUt-f8-wIw">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <vibrancyEffect>
+                                    <blurEffect style="dark"/>
+                                </vibrancyEffect>
+                            </visualEffectView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ldR-gn-sWu" customClass="MoodView" customModule="CircularMenu">
+                                <rect key="frame" x="10" y="172" width="394" height="350"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="350" id="41E-5w-AMM"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Happy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HFm-1L-hli">
+                                <rect key="frame" x="172" y="104" width="70" height="28"/>
+                                <fontDescription key="fontDescription" name="GTEestiProDisplay-Regular" family="GT Eesti Pro Display" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NyR-Go-VX2" secondAttribute="trailing" id="6Uj-EX-9Kx"/>
+                            <constraint firstAttribute="bottom" secondItem="3N9-ah-o0Q" secondAttribute="bottom" id="FAw-dt-UK0"/>
+                            <constraint firstItem="HFm-1L-hli" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="G9y-sl-i2j"/>
+                            <constraint firstItem="ldR-gn-sWu" firstAttribute="top" secondItem="HFm-1L-hli" secondAttribute="bottom" constant="40" id="YYy-E8-UPB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ldR-gn-sWu" secondAttribute="trailing" constant="10" id="a4v-h9-p2i"/>
+                            <constraint firstItem="NyR-Go-VX2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bbU-5d-vnA"/>
+                            <constraint firstItem="3N9-ah-o0Q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dRr-CZ-E4b"/>
+                            <constraint firstItem="NyR-Go-VX2" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="gdq-nK-c1r"/>
+                            <constraint firstItem="HFm-1L-hli" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="kTv-jL-kId"/>
+                            <constraint firstAttribute="bottom" secondItem="NyR-Go-VX2" secondAttribute="bottom" id="msf-la-Flk"/>
+                            <constraint firstAttribute="top" secondItem="3N9-ah-o0Q" secondAttribute="top" id="pUw-Ym-GYF"/>
+                            <constraint firstItem="ldR-gn-sWu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="s0R-3t-nWV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3N9-ah-o0Q" secondAttribute="trailing" id="yJ8-MU-c4a"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="moodBlurView" destination="NyR-Go-VX2" id="VkZ-LG-RRb"/>
+                        <outlet property="moodImageView" destination="3N9-ah-o0Q" id="C8H-FW-Tcl"/>
+                        <outlet property="moodNameLabel" destination="HFm-1L-hli" id="6er-Iz-HvZ"/>
+                        <outlet property="moodView" destination="ldR-gn-sWu" id="fbx-Zp-6iN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20" y="84"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Gentle" width="750" height="1236"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
